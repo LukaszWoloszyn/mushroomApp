@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Rozmiary tekstów -->
+    <dimen name="text_xxlarge">28sp</dimen>
+    <dimen name="text_xlarge">24sp</dimen>
+    <dimen name="text_large">20sp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="text_small">14sp</dimen>
+
+    <!-- Marginesy -->
+    <dimen name="margin_xxlarge">48dp</dimen>
+    <dimen name="margin_xlarge">32dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_min">4dp</dimen>
+
+    <!-- Wymiary komponentów -->
+    <dimen name="button_min_width">120dp</dimen>
+    <dimen name="button_min_height">48dp</dimen>
+    <dimen name="input_min_height">48dp</dimen>
+</resources>

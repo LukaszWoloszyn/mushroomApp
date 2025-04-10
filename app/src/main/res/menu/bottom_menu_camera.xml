@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/gallery"
+        android:title=""
+        android:enabled="false" />
+
+    <!-- Pusty element na środku (miejsce na FAB) -->
+    <item
+        android:id="@+id/placeholder"
+        android:title=""
+        android:enabled="false" />
+
+    <item
+        android:id="@+id/classify"
+        android:title=""
+        android:enabled="false" />
+</menu>

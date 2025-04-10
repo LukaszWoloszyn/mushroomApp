@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Linie pomocnicze dla elastycznego układu -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <!-- Dolny kontener z obrazem tła -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/background_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal">
+
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/forest_background_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bc3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Górny kontener z formularzem logowania -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/form_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:text="@string/welcome_message"
+            android:textSize="@dimen/text_xxlarge"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:autofillHints="emailAddress"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:drawablePadding="@dimen/margin_medium"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"
+            android:minHeight="@dimen/input_min_height"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_title" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:autofillHints="password"
+            android:drawableStart="@drawable/baseline_lock_24"
+            android:drawablePadding="@dimen/margin_medium"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:minHeight="@dimen/input_min_height"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:background="@drawable/login_btn"
+            android:contentDescription="@string/login_button_description"
+            android:minWidth="@dimen/button_min_width"
+            android:minHeight="@dimen/button_min_height"
+            android:paddingStart="@dimen/margin_medium"
+            android:paddingEnd="@dimen/margin_medium"
+            android:text="@string/login_button_text"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password" />
+
+        <TextView
+            android:id="@+id/registerLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:clickable="true"
+            android:contentDescription="@string/register_button_description"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/register_button_text"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">mushroomApp</string>
+    <string name="open">Open Navigation Drawer</string>
+    <string name="close">Close Navigation Drawer</string>
+    <!-- Ekran logowania -->
+    <string name="welcome_message">Witaj w \nMushroomApp!</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Hasło</string>
+    <string name="login_button_text">Zaloguj się</string>
+    <string name="register_button_text">Nie masz konta?\nZarejestruj się!</string>
+    <string name="register_button">Załóż konto</string>
+
+    <!-- Dostępność -->
+    <string name="login_button_description">Przycisk logowania</string>
+    <string name="register_button_description">Przycisk rejestracji</string>
+    <string name="forest_background_description">Tło lasu z grzybami</string>
+
+    <string name="register_title">Dołącz do\nMushroomApp!</string>
+    <string name="name_hint">Imię</string>
+    <string name="surname_hint">Nazwisko</string>
+    <string name="nick_hint">Nazwa użytkownika</string>
+    <string name="check_password_hint">Powtórz hasło</string>
+    <string name="camera_button_desc">Przycisk aparatu</string>
+
+
+</resources>
