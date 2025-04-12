@@ -21,6 +21,7 @@
     <string name="nick_hint">Nazwa użytkownika</string>
     <string name="check_password_hint">Powtórz hasło</string>
     <string name="camera_button_desc">Przycisk aparatu</string>
+    <string name="guest">Gość</string>
 
 
 </resources>

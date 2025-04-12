@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
-        <item android:id="@+id/home"
+        <item android:id="@+id/nav_home"
             android:icon="@drawable/baseline_home_24"
             android:title="Strona główna" />
-        <item android:id="@+id/loginNav"
+        <item android:id="@+id/nav_login"
             android:icon="@drawable/baseline_login_24"
             android:title="Zaloguj się" />
-        <item android:id="@+id/register"
+        <item android:id="@+id/nav_register"
             android:icon="@drawable/baseline_login_24"
             android:title="Zarejestruj się" />
+
+        <item android:id="@+id/nav_profile"
+            android:icon="@drawable/baseline_person_24"
+            android:title="Profil użytkownika" />
+        <item android:id="@+id/nav_trip"
+            android:icon="@drawable/baseline_calendar_month_24"
+            android:title="Zaplanuj wyprawę" />
+        <item android:id="@+id/nav_guide"
+            android:icon="@drawable/baseline_menu_book_24"
+            android:title="Poradnik grzybiarza" />
+        <item android:id="@+id/nav_community"
+            android:icon="@drawable/baseline_diversity_3_24"
+            android:title="Społeczność" />
+        <item android:id="@+id/nav_logout"
+            android:icon="@drawable/baseline_logout_24"
+            android:title="Wyloguj się" />
     </group>
 </menu>

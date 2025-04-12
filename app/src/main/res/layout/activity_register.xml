@@ -121,7 +121,7 @@
             app:layout_constraintTop_toBottomOf="@id/surname_input" />
 
         <EditText
-            android:id="@+id/nick_input"
+            android:id="@+id/username_input"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_large"
@@ -147,15 +147,15 @@
             android:drawableStart="@drawable/baseline_lock_24"
             android:drawablePadding="@dimen/margin_medium"
             android:hint="@string/password_hint"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:minHeight="@dimen/input_min_height"
             android:textSize="@dimen/text_medium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/nick_input" />
+            app:layout_constraintTop_toBottomOf="@id/username_input" />
 
         <EditText
-            android:id="@+id/check_password"
+            android:id="@+id/confirm_password_input"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_large"
@@ -164,7 +164,7 @@
             android:drawableStart="@drawable/baseline_lock_24"
             android:drawablePadding="@dimen/margin_medium"
             android:hint="@string/check_password_hint"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:minHeight="@dimen/input_min_height"
             android:textSize="@dimen/text_medium"
             app:layout_constraintEnd_toEndOf="parent"

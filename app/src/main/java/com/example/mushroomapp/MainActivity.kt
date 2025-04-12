@@ -63,6 +63,8 @@ class MainActivity : BaseActivity() {
             startActivity(intent)
         }
 
+        updateNavMenu()
+
     }
 
     private fun setupBottomNavigation() {
