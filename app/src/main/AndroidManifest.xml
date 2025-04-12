@@ -27,6 +27,7 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name="BaseActivity"/>
         <activity android:name=".ProfileActivity"/>
+        <activity android:name=".EditProfileActivity"/>
     </application>
 
 </manifest>

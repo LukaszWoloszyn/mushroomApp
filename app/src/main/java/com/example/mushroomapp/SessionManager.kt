@@ -39,6 +39,27 @@ class SessionManager(context: Context) {
         return user
     }
 
+    fun getUserId(): Int {
+        return sharedPreferences.getInt("user_id", -1)
+    }
+
+    fun getPassword(): String {
+        return sharedPreferences.getString("password", "") ?: ""
+    }
+
+    fun updateUserDetails(user: User) {
+        editor.apply {
+            putString("username", user.username) // Dodaj tę linię
+            putString("name", user.name)
+            putString("surname", user.surname)
+            putString("email", user.email)
+            if (user.password.isNotEmpty()) {
+                putString("password", user.password)
+            }
+            apply()
+        }
+    }
+
     fun logout() {
         editor.clear()
         editor.apply()

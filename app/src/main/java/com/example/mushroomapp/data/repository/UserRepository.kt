@@ -36,29 +36,24 @@ class UserRepository(context: Context) {
         }
     }
 
-    fun getUserByUsername(username: String): User? {
+    fun getUserById(userId: Int): User? {
         val db = dbHelper.readableDatabase
         var user: User? = null
 
         val cursor = db.query(
             "users",
             null,
-            "username = ?",
-            arrayOf(username),
-            null,
-            null,
-            null
+            "id = ?",
+            arrayOf(userId.toString()),
+            null, null, null
         )
 
         if (cursor.moveToFirst()) {
             user = cursorToUser(cursor)
-            Log.d(TAG, "Znaleziono użytkownika: ${user.username}")
-        } else {
-            Log.d(TAG, "Nie znaleziono użytkownika  o nazwie $username")
         }
 
         cursor.close()
-        //db.close()
+//        db.close()
 
         return user
     }
@@ -148,5 +143,25 @@ class UserRepository(context: Context) {
         //db.close()
 
         return usernameExists
+    }
+
+    fun updateUser(user: User): Boolean {
+        val db = dbHelper.writableDatabase
+
+        val values = ContentValues().apply {
+            put("name", user.name)
+            put("surname", user.surname)
+            put("email", user.email)
+            if (user.password.isNotEmpty()) put("password", user.password)
+        }
+
+        return try {
+            db.update("users", values, "id=?", arrayOf(user.id.toString())) > 0
+        } catch (e: Exception) {
+            Log.e(TAG, "Błąd podczas aktualizacji użytkownika", e)
+            false
+        } finally {
+//            db.close()
+        }
     }
 }
