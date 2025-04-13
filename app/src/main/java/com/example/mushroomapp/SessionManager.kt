@@ -13,6 +13,7 @@ class SessionManager(context: Context) {
         private const val KEY_USERNAME = "username"
         private const val KEY_EMAIL = "email"
         private const val KEY_NAME = "name"
+        private const val KEY_SURNAME = "surname"
     }
 
     fun createSession(user: User) {
@@ -21,6 +22,7 @@ class SessionManager(context: Context) {
             putString(KEY_USERNAME, user.username)
             putString(KEY_EMAIL, user.email)
             putString(KEY_NAME, user.name)
+            putString(KEY_SURNAME, user.surname)
             apply()
         }
     }
@@ -35,6 +37,7 @@ class SessionManager(context: Context) {
         user[KEY_USERNAME] = sharedPreferences.getString(KEY_USERNAME, null)
         user[KEY_EMAIL] = sharedPreferences.getString(KEY_EMAIL, null)
         user[KEY_NAME] = sharedPreferences.getString(KEY_NAME, null)
+        user[KEY_SURNAME] = sharedPreferences.getString(KEY_SURNAME, null)
 
         return user
     }

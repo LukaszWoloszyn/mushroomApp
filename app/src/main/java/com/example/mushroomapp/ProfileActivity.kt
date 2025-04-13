@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.mushroomapp.data.repository.UserRepository
 import com.google.android.material.card.MaterialCardView
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import de.hdodenhof.circleimageview.CircleImageView
 
 class ProfileActivity : BaseActivity() {
@@ -78,7 +79,7 @@ class ProfileActivity : BaseActivity() {
     }
 
     private fun showDeleteAccountDialog() {
-        AlertDialog.Builder(this)
+        AlertDialog.Builder(this, R.style.AlertDialogStyle)
             .setTitle("Usuń konto")
             .setMessage("Czy na pewno chcesz usunąc konto?")
             .setPositiveButton("Usuń") { _, _ ->
@@ -93,13 +94,13 @@ class ProfileActivity : BaseActivity() {
         val userId = userDetails["user_id"]?.toIntOrNull() ?: -1
 
         if (userId != -1) {
-            val success = true
+            val success = userRepository.deleteUser(userId)
 
             if (success) {
                 sessionManager.logout()
                 Toast.makeText(this, "Konto zostało usunięte", Toast.LENGTH_SHORT).show()
 
-                val intent = Intent(this, LoginActivity::class.java)
+                val intent = Intent(this, MainActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
                 finish()

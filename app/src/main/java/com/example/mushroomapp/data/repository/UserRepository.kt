@@ -164,4 +164,23 @@ class UserRepository(context: Context) {
 //            db.close()
         }
     }
+
+    fun deleteUser(userId: Int): Boolean {
+        val db = dbHelper.writableDatabase
+
+        return try {
+            val rowsDeleted = db.delete(
+                "users",
+                "id = ?",
+                arrayOf(userId.toString())
+            )
+
+            rowsDeleted > 0
+        } catch (e: Exception) {
+            Log.e(TAG, "Błąd podczas usuwania użytkownika", e)
+            false
+        } finally {
+            //db.close()
+        }
+    }
 }
