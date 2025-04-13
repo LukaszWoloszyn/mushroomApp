@@ -93,7 +93,7 @@
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/baseline_email_24"
+                            android:src="@drawable/baseline_edit_24"
                             app:tint="@color/black" />
 
                         <TextView
@@ -192,7 +192,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    app:cardBackgroundColor="#FFEBEE"
+                    app:cardBackgroundColor="#F44336"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="2dp">
 
@@ -207,7 +207,7 @@
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:src="@drawable/baseline_delete_24"
-                            app:tint="#F44336" />
+                            app:tint="#FFEBEE" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -215,14 +215,14 @@
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:text="Usuń konto"
-                            android:textColor="#F44336"
+                            android:textColor="#FFEBEE"
                             android:textSize="16sp" />
 
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:src="@drawable/baseline_arrow_forward_24"
-                            app:tint="#F44336" />
+                            app:tint="#FFEBEE" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>

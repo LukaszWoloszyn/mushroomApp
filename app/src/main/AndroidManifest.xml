@@ -28,6 +28,9 @@
         <activity android:name="BaseActivity"/>
         <activity android:name=".ProfileActivity"/>
         <activity android:name=".EditProfileActivity"/>
+        <activity android:name=".TripsListActivity"/>
+        <activity android:name=".AddEditTripActivity"/>
+        <activity android:name=".TripDetailsActivity"/>
     </application>
 
 </manifest>

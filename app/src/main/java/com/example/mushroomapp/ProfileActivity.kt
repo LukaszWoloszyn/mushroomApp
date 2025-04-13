@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.mushroomapp.data.repository.UserRepository
 import com.google.android.material.card.MaterialCardView
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import de.hdodenhof.circleimageview.CircleImageView
 
 class ProfileActivity : BaseActivity() {
@@ -32,6 +31,8 @@ class ProfileActivity : BaseActivity() {
         loadUserData()
 
         setupClickListener()
+
+        updateNavMenu()
     }
 
     private fun loadUserData() {

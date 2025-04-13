@@ -2,7 +2,7 @@
     <style name="Theme.MushroomApp" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/teal_200</item>
+        <item name="colorAccent">@color/black</item>
     </style>
 
     <style name="AlertDialogStyle" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
@@ -12,5 +12,20 @@
 
     <style name="DialogButtonStyle" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@color/black</item> <!-- Użyj koloru, który jest widoczny -->
+    </style>
+
+    <style name="DatePickerDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <!-- Kolor przycisków -->
+        <item name="colorAccent">@color/purple_700</item>
+        <!-- Kolor tła -->
+        <item name="android:windowBackground">@color/white</item>
+        <!-- Style przycisków -->
+        <item name="buttonBarPositiveButtonStyle">@style/DatePickerButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/DatePickerButtonStyle</item>
+    </style>
+
+    <style name="DatePickerButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/purple_700</item>
+        <item name="android:textSize">16sp</item>
     </style>
 </resources>

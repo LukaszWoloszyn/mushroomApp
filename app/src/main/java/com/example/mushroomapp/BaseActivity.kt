@@ -14,6 +14,7 @@ import com.example.mushroomapp.ProfileActivity
 import com.example.mushroomapp.RegisterActivity
 import com.example.mushroomapp.R
 import com.example.mushroomapp.SessionManager
+import com.example.mushroomapp.TripsListActivity
 import com.google.android.material.navigation.NavigationView
 
 open class BaseActivity : AppCompatActivity() {
@@ -65,6 +66,11 @@ open class BaseActivity : AppCompatActivity() {
                 }
                 R.id.nav_profile -> {
                     startActivity(Intent(this, ProfileActivity::class.java))
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    true
+                }
+                R.id.nav_trip -> {
+                    startActivity(Intent(this, TripsListActivity::class.java))
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
