@@ -29,9 +29,7 @@ class ProfileActivity : BaseActivity() {
         emailText = findViewById(R.id.email_text)
 
         loadUserData()
-
         setupClickListener()
-
         updateNavMenu()
     }
 
@@ -67,11 +65,13 @@ class ProfileActivity : BaseActivity() {
         }
 
         findViewById<MaterialCardView>(R.id.my_mushrooms_card).setOnClickListener{
-            // TODO
+            val intent = Intent(this, MushroomFindingsActivity::class.java)
+            startActivity(intent)
         }
 
         findViewById<MaterialCardView>(R.id.classification_history_card).setOnClickListener{
-            // TODO
+            val intent = Intent(this, ClassificationHistoryActivity::class.java)
+            startActivity(intent)
         }
 
         findViewById<MaterialCardView>(R.id.delete_account_card).setOnClickListener{
@@ -115,6 +115,4 @@ class ProfileActivity : BaseActivity() {
         super.onResume()
         loadUserData()
     }
-
-
 }

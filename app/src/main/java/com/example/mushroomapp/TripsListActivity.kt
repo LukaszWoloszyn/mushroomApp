@@ -18,7 +18,7 @@ class TripsListActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_trips_list)
+        layoutInflater.inflate(R.layout.activity_trips_list, findViewById(R.id.content_frame), true)
 
         // Inicjalizacja repozytoriów
         tripRepository = TripRepository(this)
@@ -38,16 +38,9 @@ class TripsListActivity : BaseActivity() {
             startActivity(Intent(this, AddEditTripActivity::class.java))
         }
 
-        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
-
-        // Konfiguracja przycisku powrotu
-        toolbar.setNavigationOnClickListener {
-            onBackPressed()
-        }
-
         // Załadowanie wypraw
         loadTrips()
+        updateNavMenu()
     }
 
     override fun onResume() {

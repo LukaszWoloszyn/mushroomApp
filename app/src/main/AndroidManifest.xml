@@ -6,9 +6,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/splash_icon1_round"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/splash_icon1_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MushroomApp"
         tools:targetApi="31">
@@ -18,12 +18,11 @@
             android:theme="@style/Theme.MushroomApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CameraActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginActivity"
+            android:theme="@style/Theme.MushroomApp"/>
         <activity android:name=".RegisterActivity" />
         <activity android:name="BaseActivity"/>
         <activity android:name=".ProfileActivity"/>
@@ -31,6 +30,9 @@
         <activity android:name=".TripsListActivity"/>
         <activity android:name=".AddEditTripActivity"/>
         <activity android:name=".TripDetailsActivity"/>
+        <activity android:name=".MushroomFindingsActivity"/>
+        <activity android:name=".ClassificationHistoryActivity"/>
+        <activity android:name=".MushroomDetailsActivity"/>
     </application>
 
 </manifest>

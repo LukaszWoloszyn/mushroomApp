@@ -41,14 +41,67 @@
 
                 <TextView
                     android:id="@+id/resultTextView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:textSize="18sp"
                     android:textColor="@color/dark_gray"
                     android:textAlignment="center"
+                    android:gravity="center"
                     android:lineSpacingExtra="4sp"
                     android:text="Tutaj pojawi się wynik klasyfikacji." />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mushroom_info_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/mushroom_name_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/dark_gray"/>
+
+                        <TextView
+                            android:id="@+id/mushroom_edible_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textStyle="italic"
+                            android:layout_marginTop="8dp"/>
+
+                        <TextView
+                            android:id="@+id/mushroom_description_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/save_mushroom_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:background="@drawable/login_btn"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Zapisz znalezisko"
+                    android:visibility="gone" />
+
             </LinearLayout>
         </ScrollView>
     </FrameLayout>
@@ -73,8 +126,8 @@
             android:background="@android:color/transparent"
             app:elevation="0dp"
             app:menu="@menu/bottom_menu"
-            app:itemIconTint="@color/bottom_nav_colors"
-            app:itemTextColor="@color/bottom_nav_colors"/>
+            app:itemIconTint="#0E6658"
+            app:itemTextColor="#0E6658"/>
 
     </com.google.android.material.bottomappbar.BottomAppBar>
 
@@ -86,6 +139,7 @@
         app:layout_anchor="@id/bottomAppBar"
         app:maxImageSize="40dp"
         android:id="@+id/cameraButton"
-        app:tint="@color/lavender" />
+        app:tint="#0E6658"
+        app:borderWidth="0dp"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

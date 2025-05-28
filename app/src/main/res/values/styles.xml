@@ -3,6 +3,7 @@
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryDark">@color/purple_700</item>
         <item name="colorAccent">@color/black</item>
+        <item name="android:windowBackground">@color/white</item> <!-- Normalne białe tło -->
     </style>
 
     <style name="AlertDialogStyle" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
@@ -27,5 +28,16 @@
     <style name="DatePickerButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
         <item name="android:textColor">@color/purple_700</item>
         <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="Theme.MushroomApp.NoPreview" parent="Theme.MushroomApp">
+        <item name="android:windowDisablePreview">true</item>
     </style>
 </resources>
