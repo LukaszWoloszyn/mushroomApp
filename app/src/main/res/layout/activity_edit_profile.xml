@@ -31,13 +31,22 @@
             android:orientation="vertical"
             android:padding="16dp">
 
+            <TextView
+                android:id="@+id/change_personal_data_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zmień dane"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp" />
+
             <!-- Imię -->
             <EditText
                 android:id="@+id/name_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_medium"
-                android:autofillHints="password"
+                android:autofillHints="name"
                 android:drawableStart="@drawable/baseline_person_24"
                 android:drawablePadding="@dimen/margin_medium"
                 android:hint="Imię"
@@ -65,13 +74,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_medium"
-                android:autofillHints="password"
+                android:autofillHints="email"
                 android:drawableStart="@drawable/baseline_email_24"
                 android:drawablePadding="@dimen/margin_medium"
                 android:hint="Email"
                 android:inputType="text"
                 android:minHeight="@dimen/input_min_height"
                 android:textSize="@dimen/text_medium" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/light_gray" />
 
             <!-- Sekcja zmiany hasła -->
             <TextView
@@ -124,25 +140,23 @@
                 android:inputType="textPassword"
                 android:minHeight="@dimen/input_min_height"
                 android:textSize="@dimen/text_medium" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/light_gray" />
 
             <!-- Przycisk zapisz zmiany -->
-
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/save_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_large"
+                android:textColor="@color/black"
                 android:background="@drawable/login_btn"
-                android:backgroundTint="@color/gray"
-                android:minWidth="@dimen/button_min_width"
-                android:minHeight="@dimen/button_min_height"
-                android:paddingStart="@dimen/margin_medium"
-                android:paddingEnd="@dimen/margin_medium"
-                android:text="Zapisz zmiany"
-                android:textSize="@dimen/text_medium"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/password" />
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Zapisz zmiany" />
         </LinearLayout>
     </ScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

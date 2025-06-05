@@ -60,8 +60,9 @@
 
             <TextView
                 android:id="@+id/mushroom_name_detail"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp" />
@@ -71,12 +72,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginBottom="8dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pewność: "
-                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/mushroom_confidence_detail"
@@ -93,28 +88,48 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="20sp"
                     android:text="Data: "
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/mushroom_date_detail"
+                    android:textSize="20sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
-            <!-- Miejsce na przyszły opis -->
+            <TextView
+                android:id="@+id/mushroom_name_polish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:textColor="@color/gray"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/mushroom_edibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Opis:"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="4dp" />
 
             <TextView
                 android:id="@+id/mushroom_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
                 android:text="Opis"
                 android:textStyle="italic" />
         </LinearLayout>

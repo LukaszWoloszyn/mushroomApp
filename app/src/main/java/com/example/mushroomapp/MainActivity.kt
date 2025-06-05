@@ -405,8 +405,8 @@ class MainActivity : BaseActivity() {
 
             // Ustaw kolor tekstu o jadalnoĹci
             when (czyJadalny.toLowerCase()) {
-                "tak" -> mushroomEdibleTextView.setTextColor(ContextCompat.getColor(this, R.color.nav))
-                "nie" -> mushroomEdibleTextView.setTextColor(ContextCompat.getColor(this, R.color.purple_700))
+                "tak" -> mushroomEdibleTextView.setTextColor(ContextCompat.getColor(this, R.color.splash_green))
+                "nie" -> mushroomEdibleTextView.setTextColor(ContextCompat.getColor(this, R.color.red))
                 else -> mushroomEdibleTextView.setTextColor(ContextCompat.getColor(this, R.color.dark_gray))
             }
 

@@ -130,7 +130,7 @@
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/baseline_email_24"
+                            android:src="@drawable/sharp_trophy_24"
                             app:tint="@color/black" />
 
                         <TextView
@@ -167,7 +167,7 @@
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/baseline_email_24"
+                            android:src="@drawable/baseline_history_24"
                             app:tint="@color/black" />
 
                         <TextView

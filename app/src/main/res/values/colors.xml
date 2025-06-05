@@ -7,6 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
     <color name="light_gray">#F0F0F0</color>
     <color name="dark_gray">#333333</color>
     <color name="primary_color">#6200EE</color>
@@ -15,5 +16,6 @@
     <color name="lavender">#8692f7</color>
     <color name="gray">#808080</color>
     <color name="splash_green">#4CAF50</color>
+    <color name="green">#04B30E</color>
 
 </resources>

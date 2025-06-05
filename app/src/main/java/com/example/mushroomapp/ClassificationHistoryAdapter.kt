@@ -44,7 +44,8 @@ class ClassificationHistoryAdapter(
         }
 
         // Set result text
-        holder.historyResult.text = item.result
+        val firstLine = item.result.split("\n").firstOrNull() ?: item.result
+        holder.historyResult.text = firstLine
 
         // Format and set date
         val dateFormat = SimpleDateFormat("dd.MM.yyyy, HH:mm", Locale.getDefault())

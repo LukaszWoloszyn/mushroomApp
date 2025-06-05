@@ -70,6 +70,8 @@ class MushroomDetailsActivity : BaseActivity() {
         val confidenceTextView = findViewById<TextView>(R.id.mushroom_confidence_detail)
         val dateTextView = findViewById<TextView>(R.id.mushroom_date_detail)
         val descriptionTextView = findViewById<TextView>(R.id.mushroom_description)
+        val namePolishTextView = findViewById<TextView>(R.id.mushroom_name_polish)
+        val edibilityTextView = findViewById<TextView>(R.id.mushroom_edibility)
 
         // Wczytaj obraz
         try {
@@ -81,29 +83,54 @@ class MushroomDetailsActivity : BaseActivity() {
 
         // Ustaw teksty
         nameTextView.text = mushroom.mushroomName
-        confidenceTextView.text = "${mushroom.confidence}%"
+        //confidenceTextView.text = "${mushroom.confidence}%"
 
         // Formatowanie daty
         val dateFormat = SimpleDateFormat("dd.MM.yyyy, HH:mm", Locale.getDefault())
         dateTextView.text = dateFormat.format(Date(mushroom.date))
 
-        // KLUCZOWA ZMIANA: Zamiana podkreślników na spacje
-        // POPRAWKA: Usuń procenty z nazwy przed wyszukaniem
         val cleanName = mushroom.mushroomName
             .replace(Regex("\\s*\\(\\d+%\\)"), "") // Usuwa " (71%)" lub "(71%)"
             .replace("_", " ") // Zamienia podkreślniki na spacje
             .trim() // Usuwa białe znaki z początku i końca
 
-        Log.d("MushroomDetails", "Czysta nazwa do wyszukania: '$cleanName'")
-
         val mushroomInfo = dbHelper.getMushroomInfo(cleanName)
-        Log.d("MushroomDetails", "Znaleziono info: ${mushroomInfo != null}")
-
         if (mushroomInfo != null) {
+            // OPIS
             val opis = mushroomInfo["opis"] ?: "Brak opisu"
             descriptionTextView.text = opis
+
+            // POLSKA NAZWA
+            val polishName = mushroomInfo["nazwa_polska"] ?: ""
+            if (polishName.isNotEmpty()) {
+                namePolishTextView.text = polishName
+                namePolishTextView.visibility = View.VISIBLE
+            } else {
+                namePolishTextView.visibility = View.GONE
+            }
+
+            // JADALNOŚĆ
+            val edibility = mushroomInfo["czy_jadalny"] ?: ""
+            when (edibility.lowercase()) {
+                "tak" -> {
+                    edibilityTextView.text = "Grzyb jadalny"
+                    edibilityTextView.setTextColor(getColor(R.color.splash_green))
+                    edibilityTextView.visibility = View.VISIBLE
+                }
+                "nie" -> {
+                    edibilityTextView.text = "Grzyb NIEJADALNY lub TRUJĄCY!"
+                    edibilityTextView.setTextColor(getColor(R.color.red))
+                    edibilityTextView.visibility = View.VISIBLE
+                }
+                else -> {
+                    edibilityTextView.visibility = View.GONE
+                }
+            }
+
         } else {
             descriptionTextView.text = "Brak opisu dla tego gatunku"
+            namePolishTextView.visibility = View.GONE
+            edibilityTextView.visibility = View.GONE
         }
     }
     
