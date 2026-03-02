@@ -29,6 +29,7 @@ Głównym celem aplikacji jest wsparcie grzybiarzy w warunkach leśnych, gdzie z
 > **Nota:** Pełny interfejs został oparty na zasadach Material Design.
 
 ![Ekran Główny](screenshots/main_screen.jpg) 
+
 *Ekran główny aplikacji z dostępem do aparatu i przydatnych narzędzi.*
 
 ![Wynik Identyfikacji](screenshots/recognition.jpg) 
