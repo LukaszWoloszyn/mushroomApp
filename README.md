@@ -44,7 +44,7 @@ Głównym celem aplikacji jest wsparcie grzybiarzy w warunkach leśnych, gdzie z
 
 *Panel profilu zawierający statystyki aktywności, odblokowane osiągnięcia oraz historię rozpoznań.*
 
-![Planowanie Wyprawy](screenshots/trip_planning.jpg) 
+![Planowanie Wyprawy](screenshots/trip_planning.png) 
 
 *Moduł organizacji wypraw z interaktywnymi kartami pozwalający na określenie daty, lokalizacji i listy rzeczy do zabrania.*
 
@@ -61,6 +61,6 @@ Głównym celem aplikacji jest wsparcie grzybiarzy w warunkach leśnych, gdzie z
 *Sekcja społecznościowa do wymiany doświadczeń między użytkownikami.*
 
 ## Architektura Uczenia Maszynowego
-Zastosowano dwuetapowy proces rozpoznawania minimalizujący ryzyko błędów[cite: 1793, 1798]:
+Zastosowano dwuetapowy proces rozpoznawania minimalizujący ryzyko błędów:
 1. **Model Detekcji (MobileNetV2):** Sprawdza, czy na zdjęciu znajduje się grzyb (skuteczność 98% na zbiorze walidacyjnym).
 2. **Model Klasyfikacji (ConvNeXtV2):** Rozpoznaje jeden z 104 gatunków. Model poddano optymalizacji (trening mieszanej precyzji AMP, mechanizm ArcFace Margin) i wyeksportowano do formatu TorchScript (.ptl) o rozmiarze ok. 350 MB.
