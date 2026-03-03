@@ -28,19 +28,19 @@ Głównym celem aplikacji jest wsparcie grzybiarzy w warunkach leśnych, gdzie z
 
 > Pełny interfejs został oparty na zasadach Material Design.
 
-![Ekran Główny](screenshots/main_screen.jpg) 
+![Ekran Główny](screenshots/main_screen.png) 
 
 *Ekran główny aplikacji z dostępem do aparatu i przydatnych narzędzi.*
 
-![Wynik Identyfikacji](screenshots/recognition.jpg) 
+![Wynik Identyfikacji](screenshots/recognition.png) 
 
 *Karta z wynikami identyfikacji, podająca Top 3 najbardziej prawdopodobnych gatunków.*
 
-![Wynik Identyfikacji](screenshots/menu.jpg)
+![Wynik Identyfikacji](screenshots/menu.png)
 
 *Wysuwane menu boczne pozwalające na szybką nawigację między funkcjami modułowymi zależnie od statusu logowania użytkownika.*
 
-![Wynik Identyfikacji](screenshots/profile.jpg) 
+![Wynik Identyfikacji](screenshots/profile.png) 
 
 *Panel profilu zawierający statystyki aktywności, odblokowane osiągnięcia oraz historię rozpoznań.*
 
@@ -48,15 +48,15 @@ Głównym celem aplikacji jest wsparcie grzybiarzy w warunkach leśnych, gdzie z
 
 *Moduł organizacji wypraw z interaktywnymi kartami pozwalający na określenie daty, lokalizacji i listy rzeczy do zabrania.*
 
-![Mapa Znalezisk](screenshots/map.jpg) 
+![Mapa Znalezisk](screenshots/map.png) 
 
 *Mapa zapisanych znalezisk wykorzystująca Google Maps API.*
 
-![Poradniki i Encyklopedia](screenshots/guides.jpg) 
+![Poradniki i Encyklopedia](screenshots/guides.png) 
 
 *Baza wiedzy działająca w trybie offline, zawierająca m.in. zasady bezpieczeństwa, opisy gatunków oraz zestawienie grzybów łatwych do pomylenia.*
 
-![Społeczność](screenshots/community.jpg) 
+![Społeczność](screenshots/community.png) 
 
 *Sekcja społecznościowa do wymiany doświadczeń między użytkownikami.*
 
